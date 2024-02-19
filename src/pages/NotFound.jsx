@@ -13,7 +13,9 @@ const NotFound = () => {
             </Link>
 
 
-            <div style={{ color: "red" }}>Not Found</div>
+            <div style={{
+                paddingTop: "20px",
+            }}>Not Found</div>
         </>
 
     )

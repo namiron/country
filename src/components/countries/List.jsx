@@ -7,18 +7,21 @@ const Wrapper = styled.section`
 
   display: grid;
   grid-template-column: repeat(1, 1fr);
-  justify-items: center;
-  gap: 2rem;
+  align-items: baseline;
+
+  gap: 20px;
   
   @media (min-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    align-items: baseline;
+    gap: 20px;
     padding: 2rem 0; 
   }
   
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+    align-items: baseline;
+    gap: 40px;
   }
 `;
 
