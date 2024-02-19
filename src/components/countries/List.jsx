@@ -8,14 +8,13 @@ const Wrapper = styled.section`
   display: grid;
   grid-template-column: repeat(1, 1fr);
   align-items: baseline;
-
   gap: 20px;
   
   @media (min-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
     align-items: baseline;
     gap: 20px;
-    padding: 2rem 0; 
+    padding: 20px 0; 
   }
   
   @media (min-width: 1024px) {
