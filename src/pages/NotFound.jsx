@@ -13,7 +13,7 @@ const NotFound = () => {
             </Link>
 
 
-            <div>Not Found</div>
+            <div style={{ color: "red" }}>Not Found</div>
         </>
 
     )
