@@ -1,8 +1,21 @@
 import React from 'react'
+import { IoMdArrowBack } from 'react-icons/io'
+import { Button } from '../components/Button'
+import { Link } from 'react-router-dom'
+
 
 const NotFound = () => {
+
     return (
-        <div>Not Found</div>
+        <>
+            <Link to='/'>
+                <Button className='goBack'><IoMdArrowBack /> home</Button>
+            </Link>
+
+
+            <div>Not Found</div>
+        </>
+
     )
 }
 
