@@ -1,0 +1,27 @@
+.themes {}
+
+.themeBody {}
+
+.darkBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+
+}
+
+.lightBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+
+}

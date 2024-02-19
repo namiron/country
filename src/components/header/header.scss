@@ -1,0 +1,12 @@
+@import "./../../variables.scss";
+
+.container {
+    @extend %displayComplect;
+    @extend %container;
+
+    @media (max-width:425px) {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}

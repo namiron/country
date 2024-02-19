@@ -1,0 +1,132 @@
+@use 'sass:math';
+
+//=====================================variables
+$maxWidth: 1024px;
+$colorFont: #292525;
+$bg: '';
+
+//=====================================variables
+%wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1 1 auto;
+  }
+}
+
+%container {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 20px 20px;
+
+  @media (max-width:768.98) {
+    padding: 0px 15px;
+  }
+
+  @media (max-width:425.98) {
+    padding: 0px 10px;
+  }
+}
+
+//=============================================displayFlex
+%displayFlexDirection {
+  display: flex;
+  flex-direction: column;
+}
+
+%displayComplect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%displayCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%gridComplect {
+  display: grid;
+  grid-template: 1fr / minmax(150px, 250px) 1fr;
+  height: 100%;
+}
+
+//=============================================displayFlex
+
+
+
+//=============================================displayGrid
+
+%gridMain {
+  display: grid;
+  grid-template: 1fr / minmax(150px, 250px) 1fr;
+  height: 100%;
+}
+
+//-----------------------------------varsGrid
+
+//-----------------------------------varsGrid
+
+
+%gridColumn {
+  display: grid;
+  gap: 30px;
+  justify-items: center;
+  align-items: baseline;
+  grid-template-columns: repeat(3, minmax(280px, 340px));
+  grid-template-rows: repeat(1, minmax(280px, auto));
+
+  @media (max-width:1024.98px) {
+    grid-template-columns: repeat(2, minmax(280px, 340px));
+    grid-template-rows: repeat(2, minmax(280px, auto));
+  }
+
+  @media (max-width:768.98px) {
+    grid-template-columns: repeat(1, minmax(280px, 340px));
+    grid-template-rows: repeat(3, minmax(280px, auto));
+  }
+}
+
+//=============================================displayGrid
+
+
+
+//=====================================================mixin
+//----------------------font-size
+@mixin adaptive-font($pcSize, $mobSize, $maxWidth) {
+  $addSize: $pcSize - $mobSize;
+  $fontSize: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px + 20vw) / #{$maxWidth - 320}));
+  font-size: $fontSize;
+}
+
+//----------------------font-size
+
+//----------------------adaptive-value
+
+@mixin adaptive-value($property, $pcSize, $mobSize, $maxWidth) {
+  $addSize: $pcSize - $mobSize;
+  $paddingTopSize: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px + 20vw) / #{$maxWidth - 320}));
+  #{$property}: $paddingTopSize;
+}
+
+//----------------------adaptive-value
+
+
+//=====================================================mixin
+
+//======================================================adaptive
+
+%TextAdaptiveCalc {
+  font-size: calc(24px + (16 + 16 * 0.8) * ((100vw - 320px)/ 1240));
+}
+
+%adaptiveValueCalc {
+  padding-top: calc(20px + (50 - 20)* ((100vw - 320px)/ (1240 - 320)));
+}
+
+//======================================================adaptive
+
+//   @import "variables.scss";

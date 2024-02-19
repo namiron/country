@@ -1,0 +1,11 @@
+@import "./../variables.scss";
+
+.wrapper {
+    @extend %wrapper;
+}
+
+.container {
+    @extend %container;
+
+
+}
